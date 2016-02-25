@@ -19,6 +19,9 @@ namespace SensorManager
 
         public RestClient(string restServiceUrl)
         {
+            if (string.IsNullOrWhiteSpace(restServiceUrl))
+                throw new Exception("Service URL not specified.");
+
             var handler = new HttpClientHandler { AllowAutoRedirect = true };
             if (handler.SupportsAutomaticDecompression)
                 handler.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;

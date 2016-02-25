@@ -34,8 +34,7 @@ namespace SensorManager
             Jukebox_Stop
         }
 
-        //private const string ServiceUrl = "http://localhost:37309/api/";
-        private const string SERVICE_URL = "http://iotserviceweb.azurewebsites.net/api/";
+        private const string SERVICE_URL = "";
 
         private IBandClient bandClient;
 
